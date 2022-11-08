@@ -1,4 +1,5 @@
-﻿using MauiGallery.ViewModel;
+﻿using MauiGallery.Services;
+using MauiGallery.ViewModel;
 
 namespace MauiGallery;
 
@@ -17,7 +18,8 @@ public static class MauiProgram
 
 		builder.Services
 			.AddSingleton<MainPage>()
-			.AddSingleton<SharedViewModel>();
+			.AddSingleton<SharedViewModel>()
+			.AddTransient<ImageManager>();
 
 		return builder.Build();
 	}
