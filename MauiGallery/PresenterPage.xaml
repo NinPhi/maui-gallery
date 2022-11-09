@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGallery.PresenterPage"
+             xmlns:viewmodel="clr-namespace:MauiGallery.ViewModel"
+             x:DataType="viewmodel:SharedViewModel">
+    
+    <VerticalStackLayout>
+        <Image
+            Source="{Binding Target.FullPath}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+    
+    <FlyoutBase.ContextFlyout>
+        <MenuFlyout>
+            <MenuFlyoutItem Text="Close"
+                            Clicked="PresenterFlyout_Clicked"/>
+        </MenuFlyout>
+    </FlyoutBase.ContextFlyout>
+    
+</ContentPage>

@@ -6,17 +6,26 @@ namespace MauiGallery.ViewModel;
 
 public partial class SharedViewModel : ObservableObject
 {
+    private readonly ImageManager _manager;
+
+    public Window Presenter { get; }
+
     [ObservableProperty]
     private ObservableCollection<FileResult> images;
 
     [ObservableProperty]
     private FileResult target;
 
-    public SharedViewModel()
+    public SharedViewModel(ImageManager manager)
     {
+        _manager = manager;
+
+        Presenter = new Window(new PresenterPage(this));
+
         var dir = FileSystem.AppDataDirectory;
         Images = new ObservableCollection<FileResult>(
             Directory.GetFiles(dir).Select(path => new FileResult(path)));
+        Target = Images.FirstOrDefault();
     }
 
     [RelayCommand]
@@ -27,9 +36,8 @@ public partial class SharedViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private void Show()
+    private void Show(FileResult image)
     {
-
     }
 
     [RelayCommand]
