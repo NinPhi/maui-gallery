@@ -37,11 +37,6 @@ public partial class SharedViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private void Show(FileResult image)
-    {
-    }
-
-    [RelayCommand]
     private async Task Add()
     {
         var images = await _manager.SaveMultipleAsync();
