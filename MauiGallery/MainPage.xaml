@@ -19,7 +19,7 @@
 
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer
-                            NumberOfTapsRequired="2"
+                            NumberOfTapsRequired="1"
                             CommandParameter="{Binding .}"
                             Command="{Binding ShowCommand, Source={RelativeSource AncestorType={x:Type viewmodel:SharedViewModel}}}"/>
                     </Border.GestureRecognizers>
