@@ -14,8 +14,10 @@
     
     <FlyoutBase.ContextFlyout>
         <MenuFlyout>
+            <MenuFlyoutItem Text="Minimize"
+                            Clicked="ManipulatePresenterFlyout_Clicked"/>
             <MenuFlyoutItem Text="Close"
-                            Clicked="PresenterFlyout_Clicked"/>
+                            Clicked="ClosePresenterFlyout_Clicked"/>
         </MenuFlyout>
     </FlyoutBase.ContextFlyout>
     

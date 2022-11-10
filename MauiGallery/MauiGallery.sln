@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiGallery", "MauiGallery.csproj", "{9040E9F6-9501-47D5-B45F-BF9CF58620FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiGallery", "MauiGallery.csproj", "{C4174960-628A-4E15-8EFC-98F8E42EAF85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,11 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9040E9F6-9501-47D5-B45F-BF9CF58620FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9040E9F6-9501-47D5-B45F-BF9CF58620FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9040E9F6-9501-47D5-B45F-BF9CF58620FF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{9040E9F6-9501-47D5-B45F-BF9CF58620FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9040E9F6-9501-47D5-B45F-BF9CF58620FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9040E9F6-9501-47D5-B45F-BF9CF58620FF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C4174960-628A-4E15-8EFC-98F8E42EAF85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4174960-628A-4E15-8EFC-98F8E42EAF85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4174960-628A-4E15-8EFC-98F8E42EAF85}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C4174960-628A-4E15-8EFC-98F8E42EAF85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4174960-628A-4E15-8EFC-98F8E42EAF85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,10 +26,15 @@
 
                     <FlyoutBase.ContextFlyout>
                         <MenuFlyout>
-                            <MenuFlyoutItem Text="Present on second screen"
+                            <MenuFlyoutItem Text="Open in presenter"
                                             Clicked="PresentImageFlyout_Clicked"/>
-                            <MenuFlyoutItem Text="Remove image"
+                            <MenuFlyoutItem Text="Remove from the list"
                                             Clicked="DeleteImageFlyout_Clicked"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Minimize/maximize"
+                                            Clicked="ManipulatePresenterFlyout_Clicked"/>
+                            <MenuFlyoutItem Text="Close presenter"
+                                            Clicked="ClosePresenterFlyout_Clicked"/>
                         </MenuFlyout>
                     </FlyoutBase.ContextFlyout>
 

@@ -9,7 +9,8 @@ public partial class SharedViewModel : ObservableObject
 {
     private readonly ImageManager _manager;
 
-    public Window Presenter { get; }
+    public Window Presenter { get; private set; }
+    public bool IsMaximized { get; set; }
 
     [ObservableProperty]
     private ObservableCollection<FileResult> images;
@@ -21,7 +22,7 @@ public partial class SharedViewModel : ObservableObject
     {
         _manager = manager;
 
-        Presenter = new Window(new PresenterPage(this));
+        ResetPresenter();
 
         var dir = FileSystem.AppDataDirectory;
         Images = new ObservableCollection<FileResult>(
@@ -29,11 +30,10 @@ public partial class SharedViewModel : ObservableObject
         Target = Images.FirstOrDefault();
     }
 
-    [RelayCommand]
-    private void SetTarget(FileResult image)
+    public void ResetPresenter()
     {
-        if (image != null)
-            Target = image;
+        Presenter = new Window(new PresenterPage(this));
+        IsMaximized = true;
     }
 
     [RelayCommand]
@@ -42,7 +42,7 @@ public partial class SharedViewModel : ObservableObject
         var images = await _manager.SaveMultipleAsync();
 
         if (images?.Any() ?? false)
-            images.ForEach(image => Images.Add(image));
+            images.ForEach(Images.Add);
     }
 
     [RelayCommand]
